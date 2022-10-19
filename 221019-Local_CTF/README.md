@@ -11,7 +11,7 @@
 - locks
 - XSS
 ### web(adv)
-- cmdi (adv)
-- file upload (adv)
-- storage (adv)
-- XSS (adv)
+- CMDI (Adv)
+- File Upload (Adv)
+- Storage (Adv)
+- XSS (Adv)
