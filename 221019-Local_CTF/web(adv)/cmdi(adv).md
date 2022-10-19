@@ -23,7 +23,7 @@ URL Decode:
 
 위와 같이 코드를 작성하였다.
  
-White Space가 필터링이기 때문에 `%09`(Tab)으로 우회하였고, curl에서 POST로 flag 값을 전달하기 위해 `cat flag.py`를 Back quote 내에서 한번 더 선언했어야 했는데 이미 Back quote 안에서 명령어를 실행 중이였기에 `\``로 우회하였다. 그리고 base64 encoding을 하여 flag 값을 전달받았다.
+White Space가 필터링이기 때문에 `%09`(Tab)으로 우회하였고, curl에서 POST로 flag 값을 전달하기 위해 `cat flag.py`를 Back quote 내에서 한번 더 선언했어야 했는데 이미 Back quote 안에서 명령어를 실행 중이였기에 `\\``로 우회하였다. 그리고 base64 encoding을 하여 flag 값을 전달받았다.
 
 ## Flag
 flag{are_you_the_master_of_command_injection?}
