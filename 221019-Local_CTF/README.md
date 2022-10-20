@@ -2,7 +2,7 @@
 ## Challenge list
 ### misc
 - mic check
-- [hexcode](https://git.dyhs.kr/suk-6/2022_Cyber_guardians_Webhacking/src/branch/main/221019-Local_CTF/misc/hexcode.md)
+- [hexcode](./misc/hexcode.md)
 - [The American Say's 300](https://git.dyhs.kr/suk-6/2022_Cyber_guardians_Webhacking/src/branch/main/221019-Local_CTF/misc/The-American-Say%27s-300.md)
 ### web
 - [CMDI](https://git.dyhs.kr/suk-6/2022_Cyber_guardians_Webhacking/src/branch/main/221019-Local_CTF/web/cmdi.md)
